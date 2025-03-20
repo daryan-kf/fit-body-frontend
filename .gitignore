@@ -1,0 +1,46 @@
+# React Native / Expo
+node_modules/
+.expo/
+.expo-shared/
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-generated files
+Thumbs.db
+
+# Babel
+.babelrc.js
+.babelrc
+babel.config.js
+
+# Metro bundler cache
+metro-cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Build files
+build/
+dist/
+android/app/build/
+ios/Pods/
+
+# Expo
+.expo
+.expo-shared
+
+# Misc
+.env
+*.lock
