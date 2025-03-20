@@ -15,10 +15,7 @@ my-physiotherapy-app-frontend/
 ├── components/                  # Reusable UI components
 │   ├── Button.tsx               # Custom button component
 │   ├── Input.tsx                # Custom input field component
-│   └── ExerciseCard.tsx         # Card to display an exercise
-├── hooks/                       # Custom hooks for handling logic
-│   ├── useAuth.ts               # Custom hook for managing authentication state
-│   └── useFetchExercises.ts     # Custom hook to fetch exercises from the API
+│   └── Card.tsx                 # Generic card component
 ├── navigation/                  # Contains navigation-related files (e.g., React Navigation)
 │   ├── AppNavigator.tsx         # Main app navigator (tabs, stacks)
 │   ├── AuthNavigator.tsx        # Stack for authentication-related screens (login, signup)
@@ -26,25 +23,29 @@ my-physiotherapy-app-frontend/
 ├── screens/                     # Screen components for each page or view
 │   ├── LoginScreen.tsx          # Login screen where users can authenticate
 │   ├── HomeScreen.tsx           # Home screen displaying physiotherapy exercises
-│   ├── ProfileScreen.tsx        # Profile screen for user-related settings
-│   └── ExerciseDetailScreen.tsx # Screen for viewing detailed exercise information
-├── services/                    # Services to interact with APIs and manage data
-│   ├── api.ts                   # API calls to the backend server
+│   ├── ProfileScreen.tsx         # Profile screen for user-related settings
+│   └── DetailScreen.tsx         # Screen for viewing detailed information
+├── services/                    # Services and API interactions
+│   ├── api/                     # API related files
+│   │   ├── graphqlClient.ts     # GraphQL client setup
+│   │   ├── queries              # GraphQL queries folder
+│   │   ├── mutations            # GraphQL mutations folder
+│   │   └── api.ts               # General API calls using React Query
 │   ├── authService.ts           # Authentication-related services
-│   └── exerciseService.ts       # Exercise-related services for fetching data
+│   ├── dataService.ts           # Data fetching and manipulation services
 ├── store/                       # Global state management (e.g., Redux or Context API)
 │   ├── AuthContext.tsx          # Context to manage authentication state
-│   ├── ExerciseContext.tsx      # Context to manage exercise-related data
-│   └── index.tsx                # Global state providers and initialization
+│   ├── index.tsx                # Global state providers and initialization
 ├── types/                       # TypeScript types for different app entities
 │   ├── userTypes.ts             # Types for user data
-│   └── exerciseTypes.ts         # Types for exercise data
+│   └── dataTypes.ts             # Types for app data
 ├── utils/                       # Utility functions for various purposes
-│   ├── formatDate.ts            # Utility to format exercise dates
+│   ├── formatDate.ts            # Utility to format dates
 │   └── validateInput.ts         # Utility to validate form inputs
 ├── App.tsx                      # Main entry point of the app
 ├── app.json                     # Expo configuration file
 ├── tsconfig.json                # TypeScript configuration file
 ├── package.json                 # Project dependencies and scripts
-└── README.md                    # Project documentation
+└── README.md
+
 ```
