@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-physiotherapy-app-frontend",
-    "slug": "my-physiotherapy-app-frontend",
+    "name": "physiotherapy-app",
+    "slug": "physiotherapy-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "85762d32-f101-4e3b-92f9-2314e165cae2"
+      }
+    },
+    "owner": "daryankf"
   }
 }
