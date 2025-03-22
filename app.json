@@ -29,6 +29,7 @@
         "projectId": "85762d32-f101-4e3b-92f9-2314e165cae2"
       }
     },
-    "owner": "daryankf"
+    "owner": "daryankf",
+    "plugins": ["expo-router", "expo-font"]
   }
 }

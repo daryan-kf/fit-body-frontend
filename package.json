@@ -1,7 +1,7 @@
 {
   "name": "physiotherapy-app",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "App.tsx",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -26,7 +26,9 @@
     "react-native": "0.76.7",
     "react-native-reanimated": "^3.17.1",
     "react-native-web": "~0.19.13",
-    "tamagui": "^1.125.26"
+    "tamagui": "^1.125.26",
+    "expo-router": "~4.0.19",
+    "expo-font": "~13.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
