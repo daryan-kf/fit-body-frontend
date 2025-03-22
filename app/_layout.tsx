@@ -1,13 +1,35 @@
-// app/_layout.tsx
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { Slot } from 'expo-router';
-import { TamaguiProvider } from 'tamagui';
+import { TamaguiProvider, View, styled } from 'tamagui';
 import config from '../tamagui.config';
-import * as Font from 'expo-font';
+import { useFonts } from 'expo-font';
+
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Layout() {
+  const [loaded] = useFonts({
+    Poppins: require('@/assets/fonts/Poppins-Regular.ttf'),
+    'Poppins-Bold': require('@/assets/fonts/Poppins-Bold.ttf')
+  });
+
+  if (!loaded) return null;
+
   return (
-    <TamaguiProvider config={config} defaultTheme="light">
-      <Slot /> {/* 👈 this renders the current screen */}
-    </TamaguiProvider>
+    <SafeAreaProvider>
+      <TamaguiProvider config={config}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#101010' }}>
+          <StyledView>
+            <Slot />
+          </StyledView>
+        </SafeAreaView>
+      </TamaguiProvider>
+    </SafeAreaProvider>
   );
 }
+
+const StyledView = styled(View, {
+  flex: 1,
+  backgroundColor: '#101010',
+  alignItems: 'center',
+  justifyContent: 'center'
+});
