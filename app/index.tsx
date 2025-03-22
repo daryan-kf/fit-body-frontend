@@ -3,7 +3,14 @@ import { View, Text, YStack } from 'tamagui';
 
 const Home = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#FFF'
+      }}
+    >
       <YStack justifyContent="center" alignItems="center" padding="40px">
         <Text>Home Screen</Text>
         <Link href="/login">
