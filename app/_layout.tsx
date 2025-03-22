@@ -17,11 +17,11 @@ export default function Layout() {
   return (
     <SafeAreaProvider>
       <TamaguiProvider config={config}>
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#101010' }}>
-          <StyledView>
-            <Slot />
-          </StyledView>
-        </SafeAreaView>
+        {/* <SafeAreaView style={{ flex: 1, backgroundColor: '#101010' }}> */}
+        <StyledView>
+          <Slot />
+        </StyledView>
+        {/* </SafeAreaView> */}
       </TamaguiProvider>
     </SafeAreaProvider>
   );
