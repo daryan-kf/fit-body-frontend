@@ -4,15 +4,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["*"],
-      "@/assets/*": ["assets/*"],
-      // "@/components/*": ["components/*"],
-      "@/navigation/*": ["navigation/*"],
-      "@/screens/*": ["screens/*"],
-      "@/services/*": ["services/*"],
-      "@/store/*": ["store/*"],
-      "@/types/*": ["types/*"],
-      "@/utils/*": ["utils/*"]
+      "@/*": ["*"]
     }
   }
 }
