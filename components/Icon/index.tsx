@@ -1,7 +1,7 @@
 // components/Icon.tsx
 import React from 'react';
-import { View } from 'react-native'; // or use a Tamagui container like YStack if needed
 import iconMap, { IconName } from './iconsList';
+import { View, ViewProps } from 'tamagui';
 
 export interface IconProps {
   name: IconName;
@@ -9,10 +9,11 @@ export interface IconProps {
   color?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({
+export const Icon: React.FC<IconProps & ViewProps> = ({
   name,
   size = 24,
-  color = 'white'
+  color = 'white',
+  ...props
 }) => {
   const IconComponent = iconMap[name];
 
@@ -22,7 +23,7 @@ export const Icon: React.FC<IconProps> = ({
   }
 
   return (
-    <View style={{ width: size, height: size }}>
+    <View style={{ width: size, height: size }} {...props}>
       <IconComponent width={size} height={size} fill={color} />
     </View>
   );
