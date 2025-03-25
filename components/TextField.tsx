@@ -1,14 +1,25 @@
-import { Input, InputProps, styled } from 'tamagui';
+import { Input, InputProps, styled, Label, YStack } from 'tamagui';
 
 interface TextFieldTypes {
   placeholder: string;
+  label: string;
 }
 
 export const TextField = ({
   placeholder,
+  label,
   ...props
 }: TextFieldTypes & InputProps) => {
-  return <TextFieldStyled placeholder={placeholder} {...props} />;
+  return (
+    <YStack>
+      {label && (
+        <Label color="#FFF" fontWeight="medium" fontSize={16}>
+          {label}
+        </Label>
+      )}
+      <TextFieldStyled placeholder={placeholder} {...props} />
+    </YStack>
+  );
 };
 
 const TextFieldStyled = styled(Input, {
