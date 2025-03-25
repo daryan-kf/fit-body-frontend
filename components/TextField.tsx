@@ -2,7 +2,7 @@ import { Input, InputProps, styled, Label, YStack } from 'tamagui';
 
 interface TextFieldTypes {
   placeholder: string;
-  label: string;
+  label?: string;
 }
 
 export const TextField = ({
