@@ -80,17 +80,12 @@ const Login = () => {
             <TextField
               label="Password"
               placeholder="enter password"
-              marginBottom="$4"
+              marginBottom="$2"
               onChangeText={text => setPassword(text)}
               value={password}
             />
 
-            <Text
-              color="#FAF923"
-              fontSize={14}
-              textAlign="right"
-              marginBottom="$4"
-            >
+            <Text color="#FAF923" fontSize={14} textAlign="right">
               Forgot Password?
             </Text>
 
