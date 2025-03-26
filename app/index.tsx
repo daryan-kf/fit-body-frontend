@@ -1,28 +1,17 @@
-import { useState, useEffect } from 'react';
 import { ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 import { View, YStack } from 'tamagui';
 import 'react-native-url-polyfill/auto';
 
-import { Session } from '@supabase/supabase-js';
-import { supabase } from '@/lib/supabase';
-
 import { Text } from '@/components';
 
 import backgroundImage from '@/assets/background-images/home-background.avif';
 
-const Home = () => {
-  const [session, setSession] = useState<Session | null>(null);
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-  }, []);
+import { useGetLoggedInUser } from '@/services/api/queries';
 
-  console.log({ LoggedInUserEmail: session?.user.email });
+const Home = () => {
+  const { session } = useGetLoggedInUser();
+  console.log({ session });
 
   return (
     <ImageBackground
