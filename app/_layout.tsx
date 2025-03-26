@@ -3,6 +3,7 @@ import { Slot } from 'expo-router';
 import { TamaguiProvider, View, styled } from 'tamagui';
 import config from '../tamagui.config';
 import { useFonts } from 'expo-font';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -14,15 +15,19 @@ export default function Layout() {
 
   if (!loaded) return null;
 
+  const queryClient = new QueryClient();
+
   return (
     <SafeAreaProvider>
-      <TamaguiProvider config={config}>
-        {/* <SafeAreaView style={{ flex: 1, backgroundColor: '#101010' }}> */}
-        <StyledView>
-          <Slot />
-        </StyledView>
-        {/* </SafeAreaView> */}
-      </TamaguiProvider>
+      <QueryClientProvider client={queryClient}>
+        <TamaguiProvider config={config}>
+          {/* <SafeAreaView style={{ flex: 1, backgroundColor: '#101010' }}> */}
+          <StyledView>
+            <Slot />
+          </StyledView>
+          {/* </SafeAreaView> */}
+        </TamaguiProvider>
+      </QueryClientProvider>
     </SafeAreaProvider>
   );
 }
