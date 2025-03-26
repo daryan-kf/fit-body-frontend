@@ -1,4 +1,2 @@
-export * from './TextField';
-export * from './Button';
-export * from './Text';
-export * from './Icon';
+export * from './molecules';
+export * from './atoms';
